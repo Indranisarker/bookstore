@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Details</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" type="text/css"/>
+    <link rel="stylesheet" th:href="@{/bootstrap/bootstrap.min.css}" type="text/css"/>
+</head>
+<body  style="margin: 30px">
+    <link th:include="navber.html"/>
+    <div class="col-md-1"></div>
+    <div class="col-md-5 no-padding lib-item" data-category="ui">
+        <div class="lib-panel">
+            <div class="row box-shadow">
+                <div class="col-md-6">
+                    <img class="lib-img" th:src="${imageUrl}">
+                </div>
+                <div class="col-md-6">
+                    <div class="lib-row lib-header" th:text="${book.name}">
+
+                    </div>
+                    <div class="lib-row lib-desc">
+                        <p style="font-size: 17px">Authored By <span style="font-size: 17px;font-weight: bold" th:text="${book.author}"></span></p>
+                                    <p style="font-size: 17px">Category: in <span th:text="${book.category}"></span></p>
+                        <p style="font-size: 20px; font-weight: bold">TK. <span th:text="${book.price}"></span></p>
+                                    <div class="book-info">
+                                        <p style="font-size: 17px">Book Length: <span th:text="${book.pages}"></span> pages</p>
+                                        <p style="font-size: 17px">Publication: <span th:text="${book.publication}"></span></p>
+                                        <p style="font-size: 17px">ISBN: <span th:text="${book.ISBN}"></span></p>
+                                    </div>
+                    </div>
+                    <div class="counter-container">
+                        <button id="subtractBtn" class="counter-btn">-</button>
+                        <span id="quantity" class="quantity">1</span> <!-- Display quantity -->
+                        <button id="addBtn" class="counter-btn">+</button>
+                    </div>
+
+                    <a href="#" class="add-to-cart">Add to Cart</a>
+                </div>
+                <a th:href="@{/books}" class="btn">Back</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

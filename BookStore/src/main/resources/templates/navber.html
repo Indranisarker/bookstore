@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th = "https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body>
+<div class="topnav">
+    <a href="#">BookStore</a>
+    <a th:href="@{/books}">Home</a>
+    <a href="#">Author</a>
+    <a href="#">Category</a>
+    <div class="search-container">
+            <form>
+                <input type="text" placeholder="Search..">
+                <button type="button"><i class="fa fa-search"></i> </button>
+            </form>
+    </div>
+        <div class="user-icon">
+            <i style="font-size:25px;color: white; margin-right: 60px" class="fa">&#xf0f3;</i>
+            <i style='font-size:25px;color: white; margin-right: 60px' class='fas'>&#xf07a;</i>
+            <i class="fa">&#xf007;</i>
+        </div>
+    </div>
+
+</body>
+</html>
