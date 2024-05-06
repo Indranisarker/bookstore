@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th = "https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>User Detail</title>
+    <link rel="stylesheet" th:href="@{/css/login.css}" type="text/css"/>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="content">
+    <link th:include="navber.html"/>
+    <!-- Success Message -->
+    <div th:if="${message}" class="alert alert-success" role="alert">
+        <strong th:text="${message}"></strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+<div class="detail-container">
+    <div class="row">
+        <div class="col-md-offset-5 col-md-3">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="border-radius: 16px;">
+                    <div class="well profile col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                            <figure>
+                                <img th:src="@{'https://t3.ftcdn.net/jpg/05/53/79/60/360_F_553796090_XHrE6R9jwmBJUMo9HKl41hyHJ5gqt9oz.jpg'}" alt="" class="img-circle" style="width:100px;" id="user-img">
+                            </figure>
+                            <h5 th:text="${username}" style="text-align:center;font-size: 17px;"><strong id="user-name"></strong></h5>
+                            <p style="text-align:center;font-size: 17px;" id="user-frid">FBT000000213 </p>
+                            <p style="text-align:center;font-size: 17px;overflow-wrap: break-word;" id="user-email">arunkumarperumal8791@gmail.com </p>
+                            <p style="text-align:center;font-size: 17px;"><strong>A/C status: </strong><span class="tags" id="user-status">Active</span></p>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 divider text-center"></div>
+                            <p style="text-align:center;font-size: 17px;"><strong>Job role</strong></p>
+                            <p style="text-align:center;font-size: 17px;" id="user-role">Software Engineer</p>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 divider text-center"></div>
+                            <div class="col-lg-6 left" style="text-align:center;overflow-wrap: break-word;">
+                                <h4><p style="text-align: center;"><strong id="user-globe-rank">245 </strong></p></h4>
+                                <p><small class="label label-success">Global Ranking</small></p>
+                                <!--<button class="btn btn-success btn-block"><span class="fa fa-plus-circle"></span> Follow </button>-->
+                            </div>
+                            <div class=" col-lg-6 left" style="text-align:center;overflow-wrap: break-word;">
+                                <h4><p style="text-align: center;"><strong id="user-college-rank">245 </strong></p></h4>
+                                <p> <small class="label label-warning">College Ranking</small></p>
+                                <!-- <button class="btn btn-info btn-block"><span class="fa fa-user"></span> View Profile </button>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
